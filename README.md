@@ -1,3 +1,2 @@
-# Python - Hello, World
-
+Hello there
 This repository contains introductory Python and shell scripting exercises.
