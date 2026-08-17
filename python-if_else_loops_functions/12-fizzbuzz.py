@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 def fizzbuzz():
-    """Print numbers 1-100, replacing multiples of 3/5 with Fizz/Buzz."""
     for i in range(1, 101):
         if i % 15 == 0:
             print("FizzBuzz", end=" ")
