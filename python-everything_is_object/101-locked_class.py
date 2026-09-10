@@ -7,9 +7,8 @@ class LockedClass:
 
     def __setattr__(self, name, value):
         """Only allow first_name attribute"""
-        if name == 'first_name':
-            super().__setattr__(name, value)
-        else:
+        if name != 'first_name':
             raise AttributeError(
                 "'LockedClass' object has no attribute '{}'".format(name)
             )
+        object.__setattr__(self, name, value)
