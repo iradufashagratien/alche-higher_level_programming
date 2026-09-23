@@ -1,0 +1,24 @@
+The ``text_indentation`` function prints text with blank lines after
+sentence-ending characters.
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("Hello world.")
+Hello world.
+
+>>> text_indentation("Hello? How are you?")
+Hello?
+
+How are you?
+
+>>> text_indentation("Hello: World.")
+Hello:
+
+World.
+
+>>> text_indentation("  Hello world.  ")
+Hello world.
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
