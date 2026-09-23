@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+"""Uses GitHub Basic Auth to fetch and print the user's id."""
+import requests
+import sys
+
+
+if __name__ == "__main__":
+    username = sys.argv[1]
+    password = sys.argv[2]
+    url = "https://api.github.com/user"
+    response = requests.get(url, auth=(username, password))
+    print(response.json().get('id'))
