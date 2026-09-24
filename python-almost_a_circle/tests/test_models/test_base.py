@@ -86,6 +86,12 @@ class TestSaveAndLoadFromFile(unittest.TestCase):
         with open("Rectangle.json", "r") as f:
             self.assertEqual(f.read(), "[]")
 
+    def test_save_to_file_empty_list(self):
+        """Test that Rectangle.save_to_file([]) writes an empty list."""
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual(f.read(), "[]")
+
     def test_load_from_file_no_file(self):
         """Test that loading with no existing file returns an empty list."""
         self.assertEqual(Rectangle.load_from_file(), [])
