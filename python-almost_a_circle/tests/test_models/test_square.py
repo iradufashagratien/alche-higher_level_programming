@@ -54,6 +54,11 @@ class TestSquareValidation(unittest.TestCase):
         with self.assertRaises(TypeError):
             Square(1, "2")
 
+    def test_y_string_raises_type_error(self):
+        """Test that Square(1, 2, "3") raises TypeError."""
+        with self.assertRaises(TypeError):
+            Square(1, 2, "3")
+
     def test_size_zero_raises_value_error(self):
         """Test that Square(0) raises ValueError."""
         with self.assertRaises(ValueError):
